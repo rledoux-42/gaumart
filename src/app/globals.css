@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --title-orange: #f98502;
+  --text-black: #19232b;
+  --text-orange: #dd561c;
+  --grey: #4c4c4c;
+  --bg-white: #f3f3f3;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,13 +19,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-white);
+  color: var(--text-black);
 }
 
 @layer utilities {
@@ -31,3 +31,87 @@ body {
     text-wrap: balance;
   }
 }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-black);
+  padding: 5px 15px;
+}
+
+span {
+  color: var(--text-orange);
+}
+
+main.landing {
+  /* background-image: url(/Slider11.jpg); */
+  height: 600px;
+}
+
+/*
+====================================
+      Contact page
+====================================
+*/
+
+
+/*
+Contact main style
+*/
+main.contact {
+  border-top: 2px solid var(--text-black);
+  border-bottom: 2px solid var(--text-black);
+  padding: 15px 0;
+}
+
+main.contact section {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  width: 80%;
+  height: 30%;
+}
+
+main.contact .infos {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  margin: 0 40px;
+  width: 35%;
+}
+
+.devis-link {
+  color: var(--text-orange);
+  font-size: 1.2em;
+}
+
+main.contact form {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0 40px;
+  width: 35%;
+}
+
+main.contact form input {
+  width: 60%;
+}
+
+main.contact form .submit input {
+  width: 6rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--text-black);
+  color: white;
+  padding: 4px 0;
+}
+
+/*
+====================================
+      Devis page
+====================================
+*/
